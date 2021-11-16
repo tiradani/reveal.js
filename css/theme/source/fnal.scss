@@ -1,0 +1,123 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #505050;
+$headingColor: #505050;
+
+$mainFontSize: 42px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Need to override the image size restrictions so that the title page looks right
+.reveal img{
+    max-width:  100%;
+    max-height: 100%;
+}
+
+// ------------ Title Page Styles --------------
+.title-header-box {
+    vertical-align: top;
+    text-align:     left;
+    width:          100%;
+    background:     #004C97;
+}
+.title-header-image { width: 98% }
+
+.title-image-box {
+    width:          100%;
+    padding:        0px !important;
+    margin-top:     0px !important;
+    margin-left:    0px !important;
+    margin-bottom:  0px !important;
+    margin-right:   0px !important;
+}
+.title-image {
+    padding:    0px !important;
+    margin:     0px !important;
+    width:      100%;
+    height:     100%;
+}
+
+.title-presentation-title {
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      24pt;
+    text-align:     left;
+    color:          #004C97;
+    min-height:     63pt;
+}
+
+.title-presenter {
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      16pt;
+    text-align:     left;
+    color:          #004C97;
+    vertical-align: bottom;
+}
+// ---------- End Title Page Styles ------------
+
+// ---------- Content Page Styles ------------
+.slide-title-box {
+    width:			100%;
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      24pt;
+    text-align:     left;
+    color:          #004C97;
+    min-height:     48pt;
+}
+.slide-content-box {
+    width:			100%;
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      18pt;
+    text-align:     left;
+    color:          #505050;
+}
+.slide-footer-box {
+    width:			100%;
+    font-family:    Arial, Helvetica, sans-serif;
+    font-size:      9pt;
+    text-align:     left;
+    color:          #505050;
+}
+.slider-footer-logo {
+    width: 10%;
+    display: inline-block;
+}
+// ---------- End Content Page Styles ------------
+
